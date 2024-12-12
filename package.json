@@ -34,6 +34,12 @@
     "type": "git",
     "url": "https://github.com/alexalexiuc/typedoc-jsdoc-inherit"
   },
+  "files": [
+    "dist-esm",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "typescript": "^5.7.2"
   },
