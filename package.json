@@ -5,7 +5,7 @@
   "main": "dist-esm/index.mjs",
   "type": "module",
   "exports": {
-    "import": "./dist/index.mjs"
+    "import": "./dist-esm/index.mjs"
   },
   "scripts": {
     "build": "node ./esbuild.js",
@@ -58,7 +58,8 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": false
+      "publish": false,
+      "buildCommand": "npm run build"
     },
     "plugins": {
       "@release-it/conventional-changelog": {
