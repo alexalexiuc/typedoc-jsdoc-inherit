@@ -55,8 +55,9 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "Release v${version} [skip ci]",
-      "tagName": "release/v${version}"
+      "requireBranch": "main",
+      "commitMessage": "chore(release): v${version}",
+      "tagName": "v${version}"
     },
     "npm": {
       "publish": false
