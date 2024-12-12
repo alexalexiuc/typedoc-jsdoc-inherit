@@ -21,7 +21,7 @@ jobs:
         cache: npm
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run Lint
       run: npm run lint:check
@@ -48,7 +48,7 @@ jobs:
         cache: npm
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Configure Git identity
       run: |
