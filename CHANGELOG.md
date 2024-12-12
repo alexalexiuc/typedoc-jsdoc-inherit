@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.2.1 (2024-12-12)</small>
+
+* docs: Add repository details ([f7ea9c5](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/f7ea9c5))
+
 ## 0.2.0 (2024-12-12)
 
 * feat: Add registry-url to Setup node for release step ([464e2bd](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/464e2bd))
