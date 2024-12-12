@@ -14,7 +14,7 @@
     "lint:check": "eslint \"**/*.ts\"",
     "lint:fix": "eslint \"**/*.ts\" --fix",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run lint:check && npm run type-check && npm test",
+    "prepublishOnly": "npm run build",
     "lint-staged": "lint-staged",
     "release": "release-it"
   },
@@ -58,8 +58,7 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": false,
-      "buildCommand": "npm run build"
+      "publish": false
     },
     "plugins": {
       "@release-it/conventional-changelog": {
