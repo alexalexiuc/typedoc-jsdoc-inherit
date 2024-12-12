@@ -15,8 +15,9 @@
     "lint:fix": "eslint \"**/*.ts\" --fix",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run lint:check && npm run type-check && npm test",
-    "lerna:version": "lerna version --exact --conventional-commits --conventional-graduate --no-push --no-git-tag-version --no-commit-hooks --loglevel silent --yes",
-    "lint-staged": "lint-staged"
+    "lerna:version": "lerna version  --conventional-commits --conventional-graduate --changelog-preset conventionalcommits --no-push --no-commit-hooks --yes",
+    "lint-staged": "lint-staged",
+    "release": "release-it"
   },
   "keywords": [
     "typedoc",
@@ -27,8 +28,10 @@
   ],
   "author": "Alexiuc Alex",
   "license": "MIT",
+  "peerDependencies": {
+    "typedoc": "^0.27.4"
+  },
   "dependencies": {
-    "typedoc": "^0.27.4",
     "typescript": "^5.7.2"
   },
   "devDependencies": {

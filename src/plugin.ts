@@ -1,4 +1,4 @@
-import { Application, Comment,CommentTag, Context, Converter, ParameterType, ReflectionKind } from 'typedoc';
+import { Application, Comment, CommentTag, Context, Converter, ParameterType, ReflectionKind } from 'typedoc';
 import ts from 'typescript';
 import { ReexportedReflectionsInfo, ReexportFileInfo } from './types';
 import { extractTagsFromText } from './utils';

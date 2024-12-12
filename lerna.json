@@ -9,7 +9,5 @@
       "conventionalCommits": true
     }
   },
-  "packages": ["packages/*", "types/*"],
-  "useNx": true,
   "changelog": true
 }

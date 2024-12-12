@@ -1,0 +1,59 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-test-build:
+    name: Run Lint, Type-Check, and Tests
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        task: [lint:check, type-check, test]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: npm
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Lint, Type-Check, or Tests
+      run: npm run ${{ matrix.task }}
+
+  release-and-publish:
+    name: Release and Publish
+    needs: lint-test-build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: npm
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Release-It
+      run: npm run release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
