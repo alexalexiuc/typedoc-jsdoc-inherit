@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.2.2 (2024-12-12)</small>
+
+* chore: Limit published files ([4b338cc](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/4b338cc))
+
 ## <small>0.2.1 (2024-12-12)</small>
 
 * docs: Add repository details ([f7ea9c5](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/f7ea9c5))
