@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        task: [lint:check, type-check, test]
+        task: ["lint:check", "type-check", "test"]
 
     steps:
     - name: Checkout code
