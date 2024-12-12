@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 (2024-12-12)
+
+* feat: Add registry-url to Setup node for release step ([464e2bd](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/464e2bd))
+
 ## 0.1.0 (2024-12-12)
 
 * feat: Use npm ci in CI pipelines ([ea01ca7](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/ea01ca7))
