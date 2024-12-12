@@ -10,10 +10,6 @@ jobs:
     name: Run Lint, Type-Check, and Tests
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        task: ["lint:check", "type-check", "test"]
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -21,14 +17,20 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 20
+        node-version: 16
         cache: npm
 
     - name: Install dependencies
       run: npm install
 
-    - name: Run Lint, Type-Check, or Tests
-      run: npm run ${{ matrix.task }}
+    - name: Run Lint
+      run: npm run lint:check
+
+    - name: Run Type-Check
+      run: npm run type-check
+
+    - name: Run Tests
+      run: npm test
 
   release-and-publish:
     name: Release and Publish
@@ -47,6 +49,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+
+    - name: Configure Git identity
+      run: |
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
 
     - name: Run Release-It
       run: npm run release
