@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 (2024-12-13)
+
+* feat: Make typescript dependdency peer ([fc774d6](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/fc774d6))
+
 ## <small>0.2.2 (2024-12-12)</small>
 
 * chore: Limit published files ([4b338cc](https://github.com/alexalexiuc/typedoc-jsdoc-inherit/commit/4b338cc))
