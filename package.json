@@ -27,9 +27,6 @@
   ],
   "author": "Alexiuc Alex",
   "license": "MIT",
-  "peerDependencies": {
-    "typedoc": "^0.27.4"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexalexiuc/typedoc-jsdoc-inherit"
@@ -40,8 +37,9 @@
     "README.md",
     "LICENSE"
   ],
-  "dependencies": {
-    "typescript": "^5.7.2"
+  "peerDependencies": {
+    "typedoc": ">=0.27.0",
+    "typescript": ">=5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -59,6 +57,8 @@
     "lint-staged": "^15.2.11",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.27.4",
+    "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0"
   },
   "release-it": {
